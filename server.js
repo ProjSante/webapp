@@ -1,4 +1,5 @@
-const express = require('express');
+const app = require('./app');
+// const express = require('express');
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
 const path = require('path');
@@ -15,16 +16,16 @@ mongoose
 	.catch((err) => console.error(err));
 
 // Services
-const app = express();
+// const app = express();
 
 // Middlewares
-app.use(express.json());
+// app.use(express.json());
 
 // Routes
-app.use('/api/users', require('./routes/api/users'));
-app.use('/api/auth', require('./routes/api/auth'));
-app.use('/api/patients', require('./routes/api/patients'));
-app.use('/api/relays', require('./routes/api/relays'));
+// app.use('/api/users', require('./routes/api/users'));
+// app.use('/api/auth', require('./routes/api/auth'));
+// app.use('/api/patients', require('./routes/api/patients'));
+// app.use('/api/relays', require('./routes/api/relays'));
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
