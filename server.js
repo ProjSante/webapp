@@ -1,5 +1,5 @@
 const app = require('./app');
-// const express = require('express');
+const express = require('express');
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
 const path = require('path');
@@ -26,6 +26,8 @@ mongoose
 // app.use('/api/auth', require('./routes/api/auth'));
 // app.use('/api/patients', require('./routes/api/patients'));
 // app.use('/api/relays', require('./routes/api/relays'));
+
+console.log('#### app required ####');
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {

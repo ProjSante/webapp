@@ -15,4 +15,5 @@ app.use('/api/auth', require('./routes/api/auth'));
 app.use('/api/patients', require('./routes/api/patients'));
 app.use('/api/relays', require('./routes/api/relays'));
 
+console.log('#### app created ####');
 module.exports = { app };
