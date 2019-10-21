@@ -12,9 +12,8 @@
 		"dev": "concurrently \"npm run server\" \"npm run client\" ",
 		"start": "node server.js",
 		"server": "nodemon server",
-		"test": "npm test",
-		"heroku-postbuild":
-			"NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+		"test": "jest",
+		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
 	},
 	"repository": {
 		"type": "git",
@@ -34,8 +33,10 @@
 		"mongoose": "^5.7.0"
 	},
 	"devDependencies": {
+		"axios": "^0.19.0",
 		"concurrently": "^4.1.2",
 		"eslint": "^6.3.0",
-		"nodemon": "^1.19.2"
+		"nodemon": "^1.19.2",
+		"supertest": "^4.0.2"
 	}
 }
