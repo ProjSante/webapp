@@ -9,7 +9,6 @@ install:
   - npm ci
 
 script:
-  - cd client
   - npm run test
 
 notifications:
