@@ -1,0 +1,16 @@
+sudo: false
+
+language: node_js
+
+node_js:
+  - node
+
+install:
+  - npm ci
+
+script:
+  - cd client
+  - npm run test
+
+notifications:
+  - email: false
