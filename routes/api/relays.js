@@ -45,7 +45,14 @@ router.get('/', auth, async (req, res) => {
 	}
 });
 
-router.get('/devices', auth, async (req, res) => {
+/**
+ * Vector with ids objects from all relays
+ * 
+ * @route 	GET api/relays/ids
+ * @access	Private
+ */
+
+router.get('/', auth, async (req, res) => {
 	try {
 		const user = await User.findById(req.user.id);
 
