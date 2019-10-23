@@ -4,6 +4,7 @@
 
 **Real-Time visual information about ER patients's vital signs**
 
+[![Build Status](https://travis-ci.org/ProjSante/webapp.svg?branch=develop)](https://travis-ci.org/ProjSante/webapp)
 [![website](https://img.shields.io/website?down_color=lightgrey&down_message=offline&up_color=brightgreen&up_message=up&url=https%3A%2F%2Fprojsante.herokuapp.com%2F)](https://projsante.herokuapp.com/)
 [![closed issues](https://img.shields.io/github/issues-closed-raw/ProjSante/webapp?color=success)](https://github.com/ProjSante/webapp/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed)
 [![open issues](https://img.shields.io/github/issues-raw/ProjSante/webapp)](https://github.com/ProjSante/webapp/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen)
