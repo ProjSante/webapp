@@ -17,3 +17,17 @@ export const setAlert = (msg, alertType, timeout = 5000) => (dispatch) => {
 		timeout
 	);
 };
+
+export const toRemove = () => {
+	return {
+		type : SET_ALERT
+	};
+};
+
+// export const addTodo = () => ({ type: 'ADD_TODO' });
+export const addTodo = (msg) => {
+	return {
+		type : 'ADD_TODO',
+		msg
+	};
+};
