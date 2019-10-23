@@ -1,10 +1,10 @@
-const request = require('supertest');
+// const request = require('supertest');
 
-const app = require('../../app');
+// const app = require('../../app');
 
-describe('Test API root path', () => {
-	test('It should response the GET method', async () => {
-		const response = await request(app).get('/');
-		expect(response.statusCode).toBe(200);
-	});
-});
+// describe('Test API root path', () => {
+// 	test('It should response the GET method', async () => {
+// 		const response = await request(app).get('/');
+// 		expect(response.statusCode).toBe(200);
+// 	});
+// });
