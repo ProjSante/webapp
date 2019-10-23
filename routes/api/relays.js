@@ -45,19 +45,4 @@ router.get('/', auth, async (req, res) => {
 	}
 });
 
-router.get('/devices', auth, async (req, res) => {
-	try {
-		const user = await User.findById(req.user.id);
-
-		const ids = user.devices.map((device) => {
-			return { id: device._id };
-		});
-
-		res.json(ids);
-	} catch (err) {
-		console.error(err.message);
-		res.status(500).json({ errors: [ { msg: 'Server error' } ] });
-	}
-});
-
 module.exports = router;
