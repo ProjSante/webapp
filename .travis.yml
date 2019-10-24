@@ -7,7 +7,7 @@ node_js:
 
 install:
   - npm ci
-  - cd client && npm ci
+  - npm client/ci
 
 script:
   - npm run test:server
