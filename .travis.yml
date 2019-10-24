@@ -7,11 +7,12 @@ node_js:
 
 install:
   - npm ci
-  - cd client && npm ci
+  - cd client && npm ci && cd ../
 
 script:
-  - npm run test:server
   - npm run test:site
+  - set NODE_ENV=test
+  - npm run test:server
 
 notifications:
   email: false
