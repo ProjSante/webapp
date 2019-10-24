@@ -6,6 +6,7 @@ node_js:
   - node
 
 install:
+  - npm i jest
   - npm ci
   - cd client && npm ci && cd ../
 
@@ -13,7 +14,6 @@ install:
 #   - npm run test
 
 script:
-  - ls
   - ./scripts/tests.sh
 
 notifications:
