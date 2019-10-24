@@ -12,7 +12,9 @@ install:
 # script:
 #   - npm run test
 
-script: ./scripts/tests.sh
+script:
+  - pwd
+  - ./scripts/tests.sh
 
 notifications:
   email: false
