@@ -14,7 +14,7 @@ install:
 
 script:
   - pwd
-  - ./scripts/tests.sh
+  - ../scripts/tests.sh
 
 notifications:
   email: false
