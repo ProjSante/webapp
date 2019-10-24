@@ -12,9 +12,9 @@
 		"dev": "concurrently \"npm run server\" \"npm run client\" ",
 		"start": "node server.js",
 		"server": "nodemon server",
-		"testdev": "npm run testserver && npm run testsite",
-		"test": "jest",
-		"site": "cd client && npm run test",
+		"test": "npm run test:server && npm run test:site",
+		"test:server": "jest",
+		"test:site": "cd client && npm run test",
 		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
 	},
 	"repository": {
