@@ -14,6 +14,7 @@ install:
 #   - npm run test
 
 script:
+  - set NODE_ENV=test
   - npm run test
 
 notifications:
