@@ -1,5 +1,7 @@
 set -ev
 
-npm run test:server
+npm run test
 
-npm run test:site
+cd client
+
+npm run test

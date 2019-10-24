@@ -7,14 +7,14 @@ node_js:
 
 install:
   - npm ci
-  - cd client && npm ci
+  - cd client && npm ci && cd ../
 
 # script:
 #   - npm run test
 
 script:
-  - pwd
-  - ../scripts/tests.sh
+  - ls
+  - ./scripts/tests.sh
 
 notifications:
   email: false
