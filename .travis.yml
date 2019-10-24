@@ -10,8 +10,8 @@ install:
   - cd client && npm ci
 
 script:
-  # - npm run test
   - npm run test
+  - npm run testsite
 
 notifications:
   email: false
