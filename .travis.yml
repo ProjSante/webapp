@@ -11,7 +11,7 @@ install:
 
 script:
   - npm run test
-  - npm run testsite
+  - npm run site
 
 notifications:
   email: false
