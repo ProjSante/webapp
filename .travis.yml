@@ -14,9 +14,9 @@ install:
 #   - npm run test
 
 script:
+  - npm run test:site
   - set NODE_ENV=test
   - npm run test:server
-  - npm run test:site
 
 notifications:
   email: false
