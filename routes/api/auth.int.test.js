@@ -1,5 +1,3 @@
-// jest.mock('../../middleware/auth', () => jest.fn((req, res, next) => next()));
-
 // jest.mock('../../models/User', () => {
 // 	return {
 // 		findById : jest.fn((_id) => this),
