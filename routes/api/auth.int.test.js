@@ -17,7 +17,7 @@ app.use('/', require('./auth'));
 
 describe('[Integration] => API api/auth', () => {
 	describe('POST api/auth', () => {
-		test('Fail without email and password formData', async () => {
+		test('Fail without email and password formData', async (done) => {
 			const response = await request(app).post('/');
 			expect(response.text).toEqual(
 				JSON.stringify({
@@ -36,9 +36,10 @@ describe('[Integration] => API api/auth', () => {
 				})
 			);
 			expect(response.statusCode).toBe(400);
+			done();
 		});
 
-		test('Fail without password formData', async () => {
+		test('Fail without password formData', async (done) => {
 			const response = await request(app)
 				.post('/')
 				.type('application/json')
@@ -55,9 +56,10 @@ describe('[Integration] => API api/auth', () => {
 				})
 			);
 			expect(response.statusCode).toBe(400);
+			done();
 		});
 
-		test('Fail without email formData', async () => {
+		test('Fail without email formData', async (done) => {
 			const response = await request(app)
 				.post('/')
 				.type('application/json')
@@ -74,11 +76,12 @@ describe('[Integration] => API api/auth', () => {
 				})
 			);
 			expect(response.statusCode).toBe(400);
+			done();
 		});
 	});
 
 	describe('GET api/auth', () => {
-		test('Fail with non valid auth token', async () => {
+		test('Fail with non valid auth token', async (done) => {
 			const response = await request(app).get('/').set({
 				'content-type' : 'application/json',
 				'x-auth-token' : 'token.not.valid'
@@ -87,12 +90,13 @@ describe('[Integration] => API api/auth', () => {
 				JSON.stringify({
 					errors : [
 						{
-							msg : 'Token not valid'
+							msg : 'invalid token'
 						}
 					]
 				})
 			);
 			expect(response.statusCode).toBe(401);
+			done();
 		});
 	});
 });
