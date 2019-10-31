@@ -1,0 +1,18 @@
+{
+	"firstname": "Brook",
+	"lastname": "Brown",
+	"institution": "Brooklin Hospital",
+	"jobtitle": "Broker",
+	"email": "brown@brh.com",
+	"password": "brook123!",
+	"preferences": {
+		"pulse": {
+			"danger": { "minLevel": 60, "maxLevel": 180 },
+			"warning": { "minLevel": 80, "maxLevel": 172 }
+		},
+		"oxygensat": {
+			"danger": { "minLevel": 0.5, "maxLevel": 2 },
+			"warning": { "minLevel": 0.7, "maxLevel": 1.7 }
+		}
+	}
+}

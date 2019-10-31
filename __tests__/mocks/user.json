@@ -1,0 +1,57 @@
+{
+	"preferences": {
+		"pulse": {
+			"danger": { "minLevel": 60, "maxLevel": 180 },
+			"warning": { "minLevel": 80, "maxLevel": 172 }
+		},
+		"oxygensat": {
+			"danger": { "minLevel": 0.5, "maxLevel": 2 },
+			"warning": { "minLevel": 0.7, "maxLevel": 1.7 }
+		}
+	},
+	"_id": "5db977aa4",
+	"firstname": "Brook",
+	"lastname": "Brown",
+	"institution": "Brooklin Hospital",
+	"jobtitle": "Broker",
+	"email": "brown@brh.com",
+	"date": "2019-09-27T18:50:15.149Z",
+	"devices": [
+		{
+			"patient": {
+				"status": "waiting room",
+				"admission": "2019-10-30T11:44:42.084Z",
+				"firstname": "Jack",
+				"lastname": "Sparrow",
+				"observation": "Felt from boat"
+			},
+			"measures": [
+				{
+					"_id": "101",
+					"pulse": 0.61,
+					"oxygensat": 0.37,
+					"date": "2019-10-30T17:34:44.532Z"
+				},
+				{
+					"date": "2019-10-30T17:34:20.376Z",
+					"_id": "102",
+					"pulse": 0.54,
+					"oxygensat": 0.211
+				}
+			],
+			"_id": "100"
+		},
+		{
+			"patient": {
+				"status": "surgery",
+				"admission": "2019-10-08T08:31:59.382Z",
+				"firstname": "Jack",
+				"lastname": "Tecquila",
+				"observation": "Drank in subway"
+			},
+			"measures": [],
+			"_id": "200"
+		}
+	],
+	"__v": 122
+}
