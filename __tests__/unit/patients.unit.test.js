@@ -25,7 +25,7 @@ describe('[Unit] => Controllers patients', () => {
 			done();
 		});
 
-		it('Fails to call inexistent user ', async (done) => {
+		it('Fails when calling inexistent user ', async (done) => {
 			// Bad user id
 			req.user = { id: '101010101' };
 			await patients.patientAdmission(req, res);
@@ -49,7 +49,7 @@ describe('[Unit] => Controllers patients', () => {
 			done();
 		});
 
-		it('Fails to call inexistent user ', async (done) => {
+		it('Fails when calling inexistent user ', async (done) => {
 			// Bad user id
 			req.user = { id: '101010101' };
 			await patients.editPatient(req, res);
@@ -73,7 +73,7 @@ describe('[Unit] => Controllers patients', () => {
 			done();
 		});
 
-		it('Fails to call inexistent user ', async (done) => {
+		it('Fails when calling inexistent user ', async (done) => {
 			// Bad user id
 			req.user = { id: '101010101' };
 			await patients.getPatient(req, res);
@@ -98,7 +98,7 @@ describe('[Unit] => Controllers patients', () => {
 			done();
 		});
 
-		it('Fails to retrieve non existing patient', async (done) => {
+		it('Fails when searching non existing patient', async (done) => {
 			// __tests__/mocks/user.json _id = 700 do not exist
 			req.params = { _id: '700' };
 			await patients.getPatient(req, res);
@@ -121,7 +121,7 @@ describe('[Unit] => Controllers patients', () => {
 			done();
 		});
 
-		it('Fails to call inexistent user ', async (done) => {
+		it('Fails when calling inexistent user ', async (done) => {
 			// Bad user id
 			req.user = { id: '101010101' };
 			await patients.deletePatient(req, res);
@@ -138,7 +138,7 @@ describe('[Unit] => Controllers patients', () => {
 			done();
 		});
 
-		it('Fails to retrieve non existing patient', async (done) => {
+		it('Fails when searching non existing patient', async (done) => {
 			// __tests__/mocks/user.json _id = 700 do not exist
 			req.params = { _id: '700' };
 			await patients.deletePatient(req, res);
