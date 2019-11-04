@@ -62,8 +62,7 @@ const registerUser = async (req, res) => {
 			}
 		);
 	} catch (err) {
-		console.error(err.message);
-		res.status(500).send('Server error');
+		res.status(500).json({ errors: [ { msg: err.message } ] });
 	}
 };
 
@@ -121,8 +120,7 @@ const updateUser = async (req, res) => {
 			}
 		);
 	} catch (err) {
-		console.error(err.message);
-		res.status(500).send('Server error');
+		res.status(500).json({ errors: [ { msg: err.message } ] });
 	}
 };
 
@@ -133,8 +131,7 @@ const deleteUser = async (req, res) => {
 
 		return res.status(200).json({ msg: 'User Removed' });
 	} catch (err) {
-		console.error(err.message);
-		return res.status(500).send('Server error');
+		res.status(500).json({ errors: [ { msg: err.message } ] });
 	}
 };
 
