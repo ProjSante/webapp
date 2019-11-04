@@ -1,17 +1,10 @@
-// jest.mock('../../models/User', () => {
-// 	return {
-// 		findById : jest.fn((_id) => this),
-// 		select   : jest.fn(([ a, b ]) => this)
-// 	};
-// });
-
 const request = require('supertest');
 const express = require('express');
 const app = express();
 
 app.use(express.json());
 
-app.use('/', require('./auth'));
+app.use('/', require('../../routes/api/auth'));
 
 describe('[Integration] => API api/auth', () => {
 	describe('POST api/auth', () => {

@@ -17,8 +17,7 @@ const addMeasurement = async (req, res) => {
 
 		res.status(200).json(resp);
 	} catch (err) {
-		console.error(err.message);
-		res.status(500).json({ errors: [ { msg: 'Server error' } ] });
+		res.status(500).json({ errors: [ { msg: err.message } ] });
 	}
 };
 
@@ -28,8 +27,7 @@ const getMeasurements = async (req, res) => {
 
 		res.json(user.devices);
 	} catch (err) {
-		console.error(err.message);
-		res.status(500).json({ errors: [ { msg: 'Server error' } ] });
+		res.status(500).json({ errors: [ { msg: err.message } ] });
 	}
 };
 
@@ -43,8 +41,7 @@ const getDevices = async (req, res) => {
 
 		res.json(ids);
 	} catch (err) {
-		console.error(err.message);
-		res.status(500).json({ errors: [ { msg: 'Server error' } ] });
+		res.status(500).json({ errors: [ { msg: err.message } ] });
 	}
 };
 
