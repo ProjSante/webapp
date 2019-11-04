@@ -13,6 +13,7 @@
 		"start": "node server.js",
 		"server": "nodemon server",
 		"test:server": "npm run test:api",
+		"test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
 		"test:site": "cd client && npm run test",
 		"test:api": "jest --detectOpenHandles",
 		"test:api:watch": "jest --detectOpenHandles --watch",
